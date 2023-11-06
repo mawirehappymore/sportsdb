@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title> Events | SportsDB </title>
+</head>
+<body>
+    <div id="mobilinks">
+        <button onclick="document.querySelector('nav').style.display = `flex`">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </div>
+    <nav>
+        <h1> SportsDB </h1>
+        <ul id="links">
+            <li><a href="index.html"> HOME </a></li>
+            <li><a href="search.html"> SEARCH </a></li>
+            <li><a class="active" href="events.html"> EVENTS </a></li>
+            <li><a href="info.html"> INFO </a></li>
+            <li><a href="subscription.html"> SUBSCRIPTION </a></li>
+        </ul>
+    </nav>
+    <main id="eventPage">
+        <h2> Last 5 Events for <span> Liverpool </span></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th> Event </th>
+                    <th> Date </th>
+                    <th> League </th>
+                    <th> Home Team(score) </th>
+                    <th> Away Team(score) </th>
+                    <th> Venue </th>
+                </tr>
+            </thead>
+            <tbody id="eventsTableBody">
+                
+            </tbody>
+        </table>
+        <div id="spinner"></div>
+        <div class="dialog">
+            <h2> Error! </h2>
+            <p> Sorry we encountered an error while processing your request. Try again! </p>
+            <button onclick="history.go(0)"> Retry </button>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="main.js"></script>
+</body>
+</html>

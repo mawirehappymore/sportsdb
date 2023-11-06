@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title> Home | SportsDB </title>
+</head>
+<body>
+    <div id="mobilinks">
+        <button onclick="document.querySelector('nav').style.display = `flex`">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </div>
+    <nav>
+        <h1> SportsDB </h1>
+        <ul id="links">
+            <li><a class="active" href="index.html"> HOME </a></li>
+            <li><a href="search.html"> SEARCH </a></li>
+            <li><a href="events.html"> EVENTS </a></li>
+            <li><a href="info.html"> INFO </a></li>
+            <li><a href="subscription.html"> SUBSCRIPTION </a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="welcome_text">
+            <h2> Welcome to SportsDB Database! </h2>
+            <p> Unleash your passion for sports by exploring player profiles, game history, epic events and comprehensive list of leagues. Lets the search begin! </p>
+            <a href="/search.html"><button> Search <ion-icon name="arrow-forward-outline"></ion-icon></button></a>
+        </div>
+        <div class="side_img">
+            <div class="overlay"></div>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

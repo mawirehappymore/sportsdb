@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title> Subscription | SportsDB </title>
+</head>
+<body>
+    <div id="mobilinks">
+        <button onclick="document.querySelector('nav').style.display = `flex`">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </div>
+    <nav>
+        <h1> SportsDB </h1>
+        <ul id="links">
+            <li><a href="index.html"> HOME </a></li>
+            <li><a href="search.html"> SEARCH </a></li>
+            <li><a href="events.html"> EVENTS </a></li>
+            <li><a href="info.html"> INFO </a></li>
+            <li><a class="active" href="subscription.html"> SUBSCRIPTION </a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="sub_page">
+            <h2> Subscribe <ion-icon name="thumbs-up"></ion-icon></h2>
+            <p> Subscribe to our newsletter by just submitting your email address, and you will start receiving latest sports news.</p>
+            <div class="inputWrapper">
+                <ion-icon name="mail"></ion-icon>
+                <input type="email" id="email" placeholder="Email..." required autofocus>
+                <button> Submit </button>
+            </div>
+        </div>
+        <div class="subside_img">
+            <div class="overlay"></div>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

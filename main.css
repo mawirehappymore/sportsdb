@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+:root{
+    --background: #fefefe;
+    --color: #111111;
+    --color02: #333333;
+    --color03: #101820;
+    --accent: #ffa600;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-bottom: .1rem solid rgba(127,127,127,.9);
+}
+nav > h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color03);
+    font-family: 'Lobster',sans-serif;
+}
+#links{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    width: auto;
+    align-items: flex-end;
+}
+#links > li{
+    list-style: none;
+    padding-left: 1.5rem;
+}
+#links > li > a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(127,127,127,.9);
+    text-decoration: none;
+}
+#links > li > .active{
+    color: var(--accent);
+}
+
+h2,h3,h4,h5,h6{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color);
+}
+p{
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--color03);
+}
+ion-icon{
+    font-size: 2rem;
+    color: var(--background);
+    z-index: 0;
+}
+
+main{
+    height: calc(100vh - 5rem);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+}
+#eventPage{
+    display: block;
+    padding: 2rem;
+}
+main > .welcome_text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    padding: 4rem 2rem;
+}
+main > .welcome_text > h2{
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--color02);
+}
+main > .welcome_text > p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(127,127,127,.9);
+}
+main > .welcome_text  button{
+    font-size: 1.2rem;
+    font-weight: 600;
+    align-self: flex-start;
+    padding: .5rem 2rem;
+    background: var(--color);
+    color: var(--background);
+    border: none;
+    margin-top: 1rem;
+    border-radius: 4rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+main > .welcome_text  button > ion-icon{
+    padding-left: 1rem;
+    cursor: pointer;
+}
+main > .side_img{
+    width: 100%;
+    height: 100%;
+    background: url(src/ball.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+main > .sside_img{
+    width: 100%;
+    height: 100%;
+    background: url(src/stadium.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+main > .lside_img{
+    width: 100%;
+    height: 100%;
+    background: url(src/volleyball.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+main > .subside_img{
+    width: 100%;
+    height: 100%;
+    background: url(src/sub.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+main > .player_img{
+    width: 100%;
+    height: 100%;
+    background: url(src/);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,#fefefe,transparent)
+}
+main > .search_page{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+}
+.inputWrapper{
+    display: grid;
+    grid-template-columns: auto 1fr 7rem;
+    width: 80%;
+    border: .15rem solid var(--color02);
+}
+.inputWrapper > ion-icon{
+    color: var(--color02);
+    padding: .5rem;
+}
+.inputWrapper > input{
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(127,127,127,.9);
+    padding: 0 1rem;
+    outline: none;
+}
+.inputWrapper > input::placeholder{
+    color: rgba(127,127,127,.4);
+}
+.inputWrapper > button{
+    padding: .5rem 2rem;
+    background: var(--color02);
+    font-weight: 600;
+    color: var(--background);
+    border: none;
+}
+
+#eventpage > h2{
+    font-size: 2rem;
+    color: var(--color03);
+    margin-bottom: .5rem;
+}
+#eventpage > h2 > span{
+    color: red;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: .15rem solid rgba(0,0,0,.4);
+}
+thead{
+    background: var(--color);
+    color: var(--background);
+}
+th{
+    padding-top: 1rem;
+    font-weight: 600;
+    color: var(--background);
+}
+th , td{
+    text-align: left;
+    padding-left: .5rem;
+    font-size: 1rem;
+    color: var(--color02);
+}
+th{
+    color: var(--background)
+}
+tbody > tr:nth-child(even){
+    background: rgba(127,127,127,.4);
+}
+main > .sub_page{
+    display: flex;
+    flex-flow: column;
+    padding-left: 2rem;
+}
+.sub_page > h2{
+    font-size: 2.5rem;
+}
+.sub_page > p{
+    font-size: 1.2rem;
+    width: 80%;
+    color: rgba(127,127,127,.9);
+}
+#details{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 2rem 4rem;
+}
+#details > h2{
+    font-weight: 400;
+    font-size: 2rem;
+    color: rgba(127,127,127,.9);
+    font-family: 'Lobster',sans-serif;margin-bottom: 1.5rem;
+}
+#details > h2 > span{
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--color02);
+}
+#details > .info{
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 1rem;
+}
+#details > .info > h4{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(127,127,127,.9);
+}
+#details > .info > p{
+    font-size: .9rem;
+    color: var(--color03);
+}
+#details > .social{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+}
+#details > .social  ion-icon:hover{
+    color: var(--accent);
+}
+#details > .social ion-icon{
+    color: rgba(127,127,127,.9);
+}
+#infopage{
+    position: absolute;
+    display: none;
+    height: calc(100% - 5rem);
+    background: var(--background);
+    z-index: 3;
+}
+
+#info_pagegpt{
+    width: 100%;
+    height: calc(100% - 2rem);
+    padding-left: 2rem;
+    overflow-y: auto;
+}
+#info_pagegpt > h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+#info_pagegpt > h2{
+    font-size: 1rem;
+    color: rgba(127,127,127,.9);
+}
+#info_pagegpt > p{
+    font-size: .9rem;
+    margin-bottom: 1rem;
+    color: var(--color03);
+    width: 98%;
+}
+::-webkit-scrollbar{
+    width: .1rem;
+    height: .1rem;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(127,127,127,.9);
+    border-radius: .4rem;
+}
+#spinner{
+    display: none;
+    position: absolute;
+    height: 6rem;
+    width: 6rem;
+    border: 1rem solid rgba(127,127,127,.4);
+    border-radius: 50%;
+    border-bottom: 1rem solid var(--color03);
+    animation: spin 1s linear infinite;
+    z-index: 10;
+}
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.dialog{
+    display: none;
+    position: absolute;
+    border: .2rem solid #ff5050;
+    background: rgba(255,0,0,.4);
+    padding: 2rem;
+    z-index: 10;
+    max-width: 30rem;
+}
+.dialog > h2{
+    color: red;
+    font-size: 1rem;
+}
+.dialog > p{
+    color: var(--color03);
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.dialog > button{
+    background: red;
+    border: none;
+    color: var(--background);
+    padding: .5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+#mobilinks{
+    display: none;
+}
+@media screen and (max-width: 720px){
+    nav{
+        flex-flow: column;
+        height: 100dvh;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        background: var(--background);
+        display: none;
+    }
+    #links{
+        flex-flow: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+    }
+    #links > li{
+        padding-left: 0;
+        margin-top: 1rem;
+    }
+    #links > li > a{
+        font-size: 1.5rem;
+    }
+    #mobilinks{
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        background: rgba(255,255,255,.4);
+        backdrop-filter: blur(4px);
+        padding: .5rem 1rem;
+        border-bottom: .1rem solid var(--color);
+    }
+    #mobilinks > button{
+        background-color: transparent;
+        border: none;
+    }
+    #mobilinks > button > ion-icon{
+        font-size: 3rem;
+        color: var(--color);
+    }
+    main{
+        height: 100dvh;
+        width: 100vw;
+        overflow: hidden;
+        overflow-y: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+    main .welcome_text > h2{
+        font-size: 2rem;
+    }
+    main > .welcome_text > p{
+        font-size: 1rem;
+    }
+    main > .side_img,
+    main > .sside_img,
+    main > .subside_img,
+    main > .lside_img,
+    main > .player_img{
+        grid-row: 1;
+    }
+    .overlay{
+        background: linear-gradient(to bottom,transparent,var(--background));
+    }
+   .inputWrapper{
+        all: unset
+    }
+    .inputWrapper > input{
+        width: 90%;
+        border: .1rem solid var(--color);
+        display: block;
+        margin: .5rem auto;
+        padding: .5rem 1rem;
+    }
+    .inputWrapper > button{
+        width: 90%;
+        display: block;
+        margin: .5rem auto;
+    }
+    .inputWrapper > ion-icon{
+        display: none;
+    }
+    main .sub_page{
+        padding: 0;
+    }
+    main > .sub_page > h2,
+    main > .sub_page > p{
+        font-size: 1.5rem;
+        width: 90%;
+        display: block;
+        margin: .5rem auto;
+    }
+    main > .sub_page > p{
+        font-size: .9rem;
+    }
+    #eventPage{
+        overflow: auto;
+        padding-top: 7rem;
+    }
+    td,tr{
+        white-space: nowrap;
+        padding-right: 1rem;
+    }
+    #spinner{
+        height: 3rem;
+        width: 3rem;
+        border-width: .5rem;
+    }
+    .dialog{
+        width: 90%;
+    }
+    .dialog > p{
+        font-size: .8rem;
+    }
+    .dialog > button{
+        font-size: .9rem;
+    }
+}
